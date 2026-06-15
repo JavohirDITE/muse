@@ -1,0 +1,56 @@
+<svg width="1280" height="340" viewBox="0 0 1280 340" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b0910"/>
+      <stop offset="1" stop-color="#15101f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(980 30) rotate(130) scale(440)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="64" y1="0" x2="640" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c4b5fd"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f0abfc"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#d946ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="340" rx="20" fill="url(#bg)"/>
+  <rect width="1280" height="340" rx="20" fill="url(#glow)"/>
+  <rect x="0.5" y="0.5" width="1279" height="339" rx="20" stroke="#292339"/>
+
+  <g transform="translate(64 78)">
+    <rect width="44" height="44" rx="11" fill="url(#mark)"/>
+    <path d="M22 10 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3 z" fill="#fff"/>
+    <text x="60" y="34" font-size="40" font-weight="700" fill="#e9e5f2">Muse</text>
+  </g>
+
+  <text x="64" y="176" font-size="34" font-weight="600" fill="url(#title)">Your own AI assistant studio</text>
+  <text x="64" y="214" font-size="18" fill="#a39bb5">Custom personas · lightweight RAG · real token streaming · OpenAI</text>
+
+  <g transform="translate(64 250)" font-size="14" fill="#cfc7df">
+    <g><rect width="118" height="30" rx="8" fill="#181320" stroke="#292339"/><text x="59" y="20" text-anchor="middle">Next.js 16</text></g>
+    <g transform="translate(130 0)"><rect width="80" height="30" rx="8" fill="#181320" stroke="#292339"/><text x="40" y="20" text-anchor="middle">tRPC</text></g>
+    <g transform="translate(222 0)"><rect width="92" height="30" rx="8" fill="#181320" stroke="#292339"/><text x="46" y="20" text-anchor="middle">Prisma</text></g>
+    <g transform="translate(326 0)"><rect width="84" height="30" rx="8" fill="#181320" stroke="#292339"/><text x="42" y="20" text-anchor="middle">OpenAI</text></g>
+    <g transform="translate(420 0)"><rect width="118" height="30" rx="8" fill="#181320" stroke="#292339"/><text x="59" y="20" text-anchor="middle">PostgreSQL</text></g>
+    <g transform="translate(550 0)"><rect width="96" height="30" rx="8" fill="#181320" stroke="#292339"/><text x="48" y="20" text-anchor="middle">Tailwind</text></g>
+  </g>
+
+  <g transform="translate(905 80)">
+    <rect width="312" height="180" rx="12" fill="#120f1a" stroke="#292339"/>
+    <g transform="translate(20 26)">
+      <rect width="150" height="34" rx="10" fill="#201a2c"/>
+      <text x="16" y="22" font-size="12" fill="#cfc7df">How do I ship faster?</text>
+    </g>
+    <g transform="translate(110 78)">
+      <rect width="182" height="74" rx="10" fill="#4c1d95" opacity="0.5"/>
+      <rect x="14" y="16" width="150" height="8" rx="4" fill="#c4b5fd"/>
+      <rect x="14" y="34" width="120" height="8" rx="4" fill="#a78bfa"/>
+      <rect x="14" y="52" width="60" height="8" rx="4" fill="#a78bfa"/>
+      <rect x="78" y="50" width="3" height="12" fill="#f0abfc"/>
+    </g>
+  </g>
+</svg>

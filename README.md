@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/banner.svg" alt="Muse" width="100%" />
+
 # ✨ Muse
 
 **Your own AI assistant studio.**
