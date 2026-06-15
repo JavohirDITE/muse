@@ -8,6 +8,8 @@ Design assistants with their own prompts and knowledge, then chat with fast,
 streaming responses. Works with the OpenAI API — or a built-in mock model when
 no key is set.
 
+**🔗 [Live demo](https://muse-nine-zeta.vercel.app)** — sign in with `demo@muse.app` / `password123`
+
 [Stack](#stack) · [Features](#features) · [How streaming works](#how-streaming-works) · [Getting started](#getting-started)
 
 </div>
