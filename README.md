@@ -10,6 +10,10 @@ Design assistants with their own prompts and knowledge, then chat with fast,
 streaming responses. Works with the OpenAI API — or a built-in mock model when
 no key is set.
 
+[![CI](https://github.com/JavohirDITE/muse/actions/workflows/ci.yml/badge.svg)](https://github.com/JavohirDITE/muse/actions/workflows/ci.yml)
+[![Live demo](https://img.shields.io/badge/demo-live-8b5cf6?style=flat-square&logo=vercel&logoColor=white)](https://muse-nine-zeta.vercel.app)
+[![Made with Next.js](https://img.shields.io/badge/Next.js-16-000?style=flat-square&logo=nextdotjs)](https://nextjs.org)
+
 **🔗 [Live demo](https://muse-nine-zeta.vercel.app)** — sign in with `demo@muse.app` / `password123`
 
 [Stack](#stack) · [Features](#features) · [How streaming works](#how-streaming-works) · [Getting started](#getting-started)
