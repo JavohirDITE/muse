@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: muse-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: muse
+      POSTGRES_PASSWORD: muse
+      POSTGRES_DB: muse
+    ports:
+      - "5434:5432"
+    volumes:
+      - muse-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U muse"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  muse-pgdata:

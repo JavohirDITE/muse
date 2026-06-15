@@ -1,0 +1,82 @@
+// Muse — an AI assistant studio. PostgreSQL + Prisma.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ASSISTANT
+}
+
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  name          String
+  passwordHash  String
+  avatarColor   String         @default("#8b5cf6")
+  createdAt     DateTime       @default(now())
+
+  personas      Persona[]
+  conversations Conversation[]
+}
+
+/// A configurable assistant: a system prompt, a model, and a knowledge base.
+model Persona {
+  id            String           @id @default(cuid())
+  name          String
+  emoji         String           @default("✨")
+  description   String?
+  systemPrompt  String
+  model         String           @default("gpt-4o-mini")
+  temperature   Float            @default(0.7)
+  userId        String
+  user          User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  knowledge     KnowledgeChunk[]
+  conversations Conversation[]
+  createdAt     DateTime         @default(now())
+
+  @@index([userId])
+}
+
+/// A snippet of grounding context. Naive keyword retrieval injects the most
+/// relevant chunks into the prompt (lightweight RAG).
+model KnowledgeChunk {
+  id        String   @id @default(cuid())
+  content   String
+  personaId String
+  persona   Persona  @relation(fields: [personaId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@index([personaId])
+}
+
+model Conversation {
+  id        String    @id @default(cuid())
+  title     String    @default("New chat")
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  personaId String
+  persona   Persona   @relation(fields: [personaId], references: [id], onDelete: Cascade)
+  messages  Message[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([userId])
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  role           Role
+  content        String
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  createdAt      DateTime     @default(now())
+
+  @@index([conversationId])
+}
